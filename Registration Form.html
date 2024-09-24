@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form</title>
+    <br>
+    <br>
+    <br>
+   
+    <style>
+        body {
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column; 
+        }
+        
+        header {
+            text-align: center;
+            padding: 20px 0;
+            background-color: lightgreen;
+            width: 100%;
+            box-shadow: 0 2px 5px black;
+        }
+
+        form {
+            width: 400px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px ;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #d5ecd6;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+<br>
+<br>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+
+    <form action="/submit_registration.php" method="post">
+        <label for="fname">First Name:</label>
+        <input type="text" id="fname" name="fname" required>
+        <label for="lname">Last Name:</label><br>
+        <input type="text" id="lname" name="lname" required>
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <label for="password">Mobile Number:</label>
+        <input type="text" id="number" name="number" required><br>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br>
+        <label for="languages">Languages:</label>
+        <input type="checkbox" id="english" name="languages[]" value="English">
+        <label for="english">English</label>
+        <input type="checkbox" id="tagalog" name="languages[]" value="Tagalog">
+        <label for="tagalog">Tagalog</label>
+        <input type="checkbox" id="Kapampangan" name="languages[]" value="Kapampangan">
+        <label for="kapampangan">Kapampangan</label>
+        <input type="checkbox" id="other_language" name="others[]" value="other_language">
+        <label for="other_language">Others</label>
+        <label for="Languages">If you select others type your languages:</label>
+        <input type="text" id="Languages" name="Languages" required>
+        <input type="programming_language" id="programming_language" name="programming_language" required>
+        <label for="programming_language">Programming language that you will know</label>
+        <select id="education" name="education">
+            <option value="highschool">High School</option>
+            <option value="bachelor">Bachelor's Degree</option>
+            <option value="master">Master's Degree</option>
+            <option value="doctorate">Doctorate</option>
+        </select><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+</body>
+
+</html>
